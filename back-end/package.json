@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "./src/server.js",
   "scripts": {
-    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
-    "drop": "npx sequelize-cli db:drop $",
-    "seed": "npx sequelize-cli db:seed:all $",
+    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate",
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "start": "node .",
-    "dev": "nodemon .",
+    "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "dependencies": {
