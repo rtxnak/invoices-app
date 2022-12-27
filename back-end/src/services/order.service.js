@@ -3,16 +3,17 @@ const shownStatus = require('../helper/shownStatus');
 
 const getAll = async () => {
   const ordersInformation = await Order.findAll({
-    attributes: ['nNf', 'emissionDate', 'value', 'orderStatusBuyer',],
+    attributes: ['nNf', 'emissionDate', 'value', 'orderStatusBuyer'],
     include: [
-      { model: Buyer, as: 'buyer', attributes: ['name'], },
-      { model: Provider, as: 'provider', attributes: ['name'], },
+      { model: Buyer, as: 'buyer', attributes: ['name'] },
+      { model: Provider, as: 'provider', attributes: ['name'] },
     ],
   });
 
-  ordersInformation.map((order) => {
-    const orderShownStatusstatusDescription = shownStatus.statusDescription[parseInt(order.orderStatusBuyer)];
-    order.orderStatusBuyer = orderShownStatusstatusDescription;
+  ordersInformation.forEach((order) => {
+    const orderStatusBuyerParsed = parseInt(order.orderStatusBuyer, 10);
+    const orderShownStatusDescription = shownStatus.statusDescription[orderStatusBuyerParsed];
+    order.orderStatusBuyer = orderShownStatusDescription;
   });
 
   return ordersInformation;
