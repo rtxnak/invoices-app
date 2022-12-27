@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     expiresIn: DataTypes.DATE,
     paymentStatusSponsor: DataTypes.BOOLEAN,
     paymentStatusProvider: DataTypes.BOOLEAN,
-    orderId:  { type: DataTypes.INTEGER, foreignKey: true },
-    sponsorId:  { type: DataTypes.INTEGER, foreignKey: true },
+    orderId: { type: DataTypes.INTEGER, foreignKey: true },
+    sponsorId: { type: DataTypes.INTEGER, foreignKey: true },
   });
 
   return Offer;

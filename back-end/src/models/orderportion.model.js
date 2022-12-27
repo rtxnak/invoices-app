@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     dVenc: DataTypes.STRING,
     vDup: DataTypes.STRING,
     availableToMarket: DataTypes.BOOLEAN,
-    orderId:  { type: DataTypes.INTEGER, foreignKey: true },
+    orderId: { type: DataTypes.INTEGER, foreignKey: true },
   });
 
   return Orderportion;
