@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     cargoPackingList: DataTypes.STRING,
     deliveryCtrc: DataTypes.STRING,
   });
-
+  Order.associate = (models) => {
+    Order.belongsTo(models.Buyer, { foreignKey: 'buyerId', as: 'buyer' });
+    Order.belongsTo(models.Provider, { foreignKey: 'providerId', as: 'provider' });
+  };
   return Order;
 };
