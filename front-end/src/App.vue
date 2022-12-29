@@ -1,9 +1,6 @@
 <template>
-  <div class="text-cf-green">
-    invoices-app
-  </div>
+  <router-view />
 </template>
 
 <script>
- 
 </script>
