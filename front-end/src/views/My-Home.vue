@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-row">
     <!-- NAV BAR -->
-    <div class="h-screen w-4/12  bg-slate-100">
-      <side-bar />
-    </div>
+    <side-bar />
     <!-- CONTENT -->
     <div class="w-full">
       <!-- HEADER -->
