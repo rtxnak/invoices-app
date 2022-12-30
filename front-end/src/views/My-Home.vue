@@ -5,21 +5,26 @@
       <side-bar />
     </div>
     <!-- CONTENT -->
-    <div>
+    <div class="w-full">
       <!-- HEADER -->
-      <div></div>
+      <my-header />
       <!-- TABLE -->
-      <div></div>
+      <nf-table />
     </div>
   </div>
 </template>
 
 <script>
 import SideBar from '../components/My-SideBar.vue'
+import Table from '../components/My-Table.vue'
+import Header from '../components/My-Header.vue'
 
 export default {
+
   components: {
     'side-bar': SideBar,
-  }
+    'nf-table': Table,
+    'my-header': Header
+  },
 }
 </script>
