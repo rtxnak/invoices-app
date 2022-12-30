@@ -13,9 +13,8 @@ const getAll = async () => {
   ordersInformation.forEach((order) => {
     const orderStatusBuyerParsed = parseInt(order.orderStatusBuyer, 10);
     const orderShownStatusDescription = shownStatus.statusDescription[orderStatusBuyerParsed];
-    order.orderStatusBuyer = orderShownStatusDescription;
+    order.dataValues.orderStatusDescription = orderShownStatusDescription;
   });
-
   return ordersInformation;
 };
 
