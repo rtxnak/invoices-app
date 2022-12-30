@@ -28,7 +28,7 @@
           <td class="text-cf-dark2-grey text-sm text-left border-y px-6 h-14">{{ formatData(order.emissionDate) }}
           </td>
           <td class="text-cf-green text-sm text-left border-y px-6 h-14">{{ formatValue(order.value) }}</td>
-          <td class="text-cf-green text-sm text-left border-y px-6 h-14">{{ order.orderStatusBuyer }}</td>
+          <td class="text-cf-green text-sm text-left border-y px-6 h-14">{{ order.orderStatusDescription }}</td>
           <td class="border-y border-r rounded-r-lg h-14">
             <button class="border py-1.5 px-6 rounded-3xl text-gray-500 text-xs">
               Dados do cedente
