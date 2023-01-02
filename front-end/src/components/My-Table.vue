@@ -64,7 +64,9 @@ export default {
 
     const fetchOrders = async () => api.get('/').then((response) => (ordersData.value = response.data));
 
-    onMounted(fetchOrders)
+    onMounted(fetchOrders);
+    document.title = "Notas Fiscais";
+
     return { ordersData }
   },
 
