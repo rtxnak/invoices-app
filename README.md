@@ -8,6 +8,7 @@ This project was developed to a technical test with the [skills](#skills) on a f
 ## Skills 
 On FrontEnd:
  - VueJs and Tailwindcss to create the pages;
+ - Axios to do the API connection
 
 On BackEnd:
  - Express framework from Node.js and ORM library Sequelize for MySQL database modeling;
