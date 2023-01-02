@@ -1,0 +1,21 @@
+{
+  "name": "invoices-app",
+  "version": "1.0.0",
+  "scripts": {
+    "compose:up": "docker-compose up -d --build",
+    "compose:down": "docker-compose down --remove-orphans",
+    "install:all": "cd ./front-end && npm install && cd ../back-end && npm install",
+    "backend": "cd ./back-end && npm run start",
+    "frontend": "cd ./front-end && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtxnak/invoices-app.git"
+  },
+  "author": "Rafael Nakashima @rtxnak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtxnak/invoices-app/issues"
+  },
+  "homepage": "https://github.com/rtxnak/invoices-app#readme"
+}
